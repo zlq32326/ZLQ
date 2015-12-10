@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset="utf-8")
+  script(src="http://code.angularjs.org/1.4.7/angular.min.js")
+  script(type="application/javascript", src="lib/jquery.min.js")
+  script(type="application/javascript", src="lib/jspkg-archive/jquery.dynatable.js")  
+  link(rel="stylesheet", type="text/css", href="lib/jspkg-archive/jquery.dynatable.css")
+  link(rel="stylesheet", type="text/css", href="css/lottery_list.css")
+body
+  div#wrapper(ng-app="lotteryApp" ng-controller="lotteryCtrl")
+    table#keywords
+      thead
+        tr
+          th(data-dynatable-column = "description") 描述
+          th(data-dynatable-column = "lottery_url") 名字
+          //- th(data-dynatable-column = "openTime") 日期
+          
+    script(type="application/javascript", src="js/lottery_list.js")  

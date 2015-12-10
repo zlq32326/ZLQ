@@ -1,0 +1,1 @@
+angular.module('artistApp', []).controller('artistCtrl', function($scope, $http){});

@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset="utf-8")
+  script(type="application/javascript", src="lib/qrcode.min.js")
+  script(type="application/javascript", src="lib/jquery.min.js")
+  script(type="application/javascript", src="js/test.js")
+  link(rel="stylesheet", type="text/css", href="css/video_qr.css")
+body.background 
+  
+  h1 多种视频的二维码
+  //- #nowDiv
+  
+  - list = [ "http://192.168.199.10/hls/big_360p_400.html", "http://192.168.199.10/hls/big_360p_600.html", "http://192.168.199.10/hls/big_360p_800.html", "http://192.168.199.10/hls/big_480p_800.html", "http://192.168.199.10/hls/big_480p_1000.html", "http://192.168.199.10/hls/big_720p_1500.html", "http://192.168.199.10/hls/big_720p_2000.html", "http://192.168.199.10/hls/big_1080p_2500.html", "http://192.168.199.10/hls/big_1080p_3500.html" ]
+  - i = 0
+  each value in list
+    a(href = "#{value}") 这是好看的视频   #{i}
+    h3 HPPTSb 
+    hr
+    input(id="text#{i}" name="text" type="text", value=value readonly=true)
+    .qrcode(id="qrcode#{i}")
+    - i++
+   
+  // script
+  script(type="application/javascript", src="js/video_qr.js")

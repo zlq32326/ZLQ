@@ -1,0 +1,28 @@
+{
+  "name": "angular-jade-ls-blank",
+  "version": "1.0.0",
+  "description": "a blank web",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mowentian/angular_jade_ls_blank.git"
+  },
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-jade": "^1.0.0",
+    "gulp-livescript": "^2.4.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-util": "^3.0.4",
+    "livescript": "^1.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mowentian/angular_jade_ls_blank/issues"
+  },
+  "homepage": "https://github.com/mowentian/angular_jade_ls_blank#readme",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://code.angularjs.org/1.4.7/angular.min.js"></script>
+  <script type="application/javascript" src="lib/jquery.min.js"></script>
+  <script type="application/javascript" src="lib/jspkg-archive/jquery.dynatable.js"> </script>
+  <link rel="stylesheet" type="text/css" href="lib/jspkg-archive/jquery.dynatable.css">
+  <link rel="stylesheet" type="text/css" href="css/lottery_list.css">
+</head>
+<body>
+  <div id="wrapper" ng-app="lotteryApp" ng-controller="lotteryCtrl">
+    <table id="keywords">
+      <thead>
+        <tr>
+          <th data-dynatable-column="description">描述</th>
+          <th data-dynatable-column="lottery_url">名字</th>
+        </tr>
+      </thead>
+    </table>
+    <script type="application/javascript" src="js/lottery_list.js"> </script>
+  </div>
+</body>
