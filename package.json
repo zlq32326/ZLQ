@@ -12,7 +12,10 @@
     "gulp-livescript": "^2.4.0",
     "gulp-sass": "^2.1.0",
     "gulp-util": "^3.0.4",
-    "livescript": "^1.4.0"
+    "koa": "^1.1.2",
+    "koa-static": "^1.5.2",
+    "livescript": "^1.4.0",
+    "pm2": "^0.15.10"
   },
   "bugs": {
     "url": "https://github.com/mowentian/angular_jade_ls_blank/issues"
@@ -21,7 +24,9 @@
   "main": "gulpfile.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/pm2/bin/pm2 start app.js",
+    "stop" :"./node_modules/pm2/bin/pm2 stop app.js"
   },
   "author": "",
   "license": "ISC"

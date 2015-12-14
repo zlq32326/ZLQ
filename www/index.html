@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8">
   <script src="lib/angular-1.4.7/angular.min.js"></script>
   <script src="js/todo.js"></script>
   <link rel="stylesheet" href="css/todo.css">
+	
 </head>
 <body ng-app="todoApp">
-  <h2>Todo</h2>
+  <h2>Seeker is 大帅逼 </h2>
   <div ng-controller="TodoListController as todoList"><span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
     <ul class="unstyled">
       <li ng-repeat="todo in todoList.todos">
@@ -13,7 +15,7 @@
       </li>
     </ul>
     <form ng-submit="todoList.addTodo()">
-      <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new todo here">
+      <input type="text" ng-model="todoList.todoText" size="30" placeholder="请写入描述seeker是帅逼的理由">
       <input type="submit" value="addt">
     </form>
   </div>
