@@ -4,7 +4,7 @@ head
   script(src='js/todo.js')
   link(rel='stylesheet', href='css/todo.css')
 body(ng-app='todoApp')
-  h2 Todo
+  h2 Seeker is 大帅逼
   div(ng-controller='TodoListController as todoList')
     span {{todoList.remaining()}} of {{todoList.todos.length}} remaining
     ul.unstyled
@@ -12,5 +12,5 @@ body(ng-app='todoApp')
         input(type='checkbox', ng-model='todo.done')
         span(class='done-{{todo.done}}') {{todo.text}}
     form(ng-submit='todoList.addTodo()')
-      input(type='text', ng-model='todoList.todoText', size='30', placeholder='add new todo here')
+      input(type='text', ng-model='todoList.todoText', size='30', placeholder='请写入描述seeker是帅逼的理由')
       input(type='submit', value='addt')
