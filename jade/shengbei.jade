@@ -1,0 +1,16 @@
+doctype html
+head
+  script(src='lib/angular-1.4.7/angular.min.js')
+  script(src='js/todo.js')
+  link(rel='stylesheet', href='css/todo.css')
+body(ng-app='todoApp')
+  h2 愚蠢的圣杯
+  div(ng-controller='TodoListController as todoList')
+    span {{todoList.remaining()}} of {{todoList.todos.length}} remaining
+    ul.unstyled
+      li(ng-repeat='todo in todoList.todos')
+        input(type='checkbox', ng-model='todo.done')
+        span(class='done-{{todo.done}}') {{todo.text}}
+    form(ng-submit='todoList.addTodo()')
+      input(type='text', ng-model='todoList.todoText', size='30', placeholder='请写入圣杯是SB的理由')
+      input(type='submit', value='addt')

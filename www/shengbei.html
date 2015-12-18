@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <script src="lib/angular-1.4.7/angular.min.js"></script>
+  <script src="js/todo.js"></script>
+  <link rel="stylesheet" href="css/todo.css">
+</head>
+<body ng-app="todoApp">
+  <h2>愚蠢的圣杯</h2>
+  <div ng-controller="TodoListController as todoList"><span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+    <ul class="unstyled">
+      <li ng-repeat="todo in todoList.todos">
+        <input type="checkbox" ng-model="todo.done"><span class="done-{{todo.done}}">{{todo.text}}</span>
+      </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+      <input type="text" ng-model="todoList.todoText" size="30" placeholder="请写入圣杯是SB的理由">
+      <input type="submit" value="addt">
+    </form>
+  </div>
+</body>
