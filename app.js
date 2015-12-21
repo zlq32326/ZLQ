@@ -1,8 +1,10 @@
 var serve = require('koa-static');
-var koa = require('koa');
+var koa = require('koa.io');
 var app = koa();
 
 // $ GET /package.json
+
+
 app.use(serve('./www'));
 //
 // // $ GET /hello.txt
@@ -10,5 +12,6 @@ app.use(serve('./www'));
 // // or use absolute paths
 //
 app.listen(3000);
+
 
 console.log('listening on port 3000');
